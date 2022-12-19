@@ -57,29 +57,31 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Budget-App <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+>
 
-**[your_project__name]** is a...
+**Budget-App** is a simple budget app that allows users to add their incomes and expenses and see their balance in real time.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Ruby On Rails <a name="ruby-on-rails"></a>
+### Tailwind <a name="tailwind"></a>
+### HTML <a name="html"></a>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://reactjs.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">localhost</a></li>
   </ul>
 </details>
 
@@ -94,7 +96,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> Describe the main features of your project.
 
 - **[key_feature_1]**
 - **[key_feature_2]**
@@ -124,75 +126,75 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
+
 Example command:
 
 ```sh
  gem install rails
 ```
- -->
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
+
 Example commands:
 
 ```sh
   cd my-folder
   git clone git@github.com:myaccount/my-project.git
 ```
---->
+-
 
 ### Install
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
   cd my-project
   gem install
 ```
---->
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
+
 Example command:
 
 ```sh
   rails server
 ```
---->
+-
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
   bin/rails test test/models/article_test.rb
 ```
---->
+-
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
+
 Example:
 
 ```sh
 
 ```
- -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,17 +204,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Samiullah**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@samiullah997](https://github.com/samiullah997)
+- Twitter: [@samiullahk997](https://twitter.com/samiullahk997)
+- LinkedIn: [Samiullah Khan](https://www.linkedin.com/in/samiullah-khan-2702b7171/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
