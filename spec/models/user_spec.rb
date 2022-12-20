@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
   context 'Testing Validations' do
     it 'is validate with attributes' do
-        expect(@user).to be_valid
+      expect(@user).to be_valid
     end
     it 'is not valid with out name' do
       @user.name = nil

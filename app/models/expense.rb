@@ -1,5 +1,6 @@
 class Expense < ApplicationRecord
-  validates :name, presence: true, length: { maximum: 50 }, uniqueness: { scope: :author, message: 'You already have an transaction with this name' }
+  validates :name, presence: true, length: { maximum: 50 },
+                   uniqueness: { scope: :author, message: 'You already have an transaction with this name' }
   validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
   belongs_to :author, class_name: 'User'

@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
-  validates :name, presence: true, length: { maximum: 15 }, uniqueness: { scope: :author, message: 'You have already Category with this name' }
+  validates :name, presence: true, length: { maximum: 15 },
+                   uniqueness: { scope: :author, message: 'You have already Category with this name' }
   validates :icon, presence: true, length: { maximum: 50 }
 
   belongs_to :author, class_name: 'User'
