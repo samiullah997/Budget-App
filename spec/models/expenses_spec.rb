@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
   before :each do
-    @user = User.create(name: 'Luthen Rael')
+    @user = User.create(name: 'Samiullah', email: 'samiullahk997@gmail.com', password: 'samiullah')
     @transaction = Expense.new(author: @user, name: 'Andor', amount: 12.99)
   end
 
