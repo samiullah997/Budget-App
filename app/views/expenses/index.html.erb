@@ -1,0 +1,19 @@
+<div class="w-full">
+ <% if notice.present? %>
+    <p class="py-2 px-3 font-medium rounded-lg text-green-500 inline-block bg-green-50 mb-5" id="notice"><%= notice %></p>
+  <% end %> 
+  <div class="flex items-center justify-between">
+    <h1 class=" text-4xl font-bold"><%= "#{@group.name}' " %>Transactions</h1>
+  </div>
+  <div id="expenses" class="min-w-full">
+    <%= render @expenses %>
+  </div>
+</div>
+<div class="bg-second flex justify-center fixed left-0 right-0 bottom-0 py-3">
+  <%= link_to new_group_expense_path, class: "w-[80%] flex px-5 bg-second items-center justify-center border text-white gap-2 py-2 block font-medium" do %>
+    <span>New transaction</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+    </svg>
+  <% end %>
+</div>
