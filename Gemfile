@@ -63,7 +63,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
-
+  # Use bullet to fix N + 1 problems
+  gem 'bullet'
   # Use letter_opener to open emails in the browser
   gem 'letter_opener'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -79,3 +80,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'tailwindcss-rails', '~> 2.0'
