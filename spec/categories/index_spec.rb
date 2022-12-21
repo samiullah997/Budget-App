@@ -25,5 +25,4 @@ RSpec.feature 'This Categories Testing', type: :feature do
     expect(current_path).to match groups_path
     expect(page).to have_content 'cricket'
   end
-
 end
