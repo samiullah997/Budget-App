@@ -1,0 +1,13 @@
+<div class="absolute top-8 flex items-center">
+  <%= image_tag 'https://gifimage.net/wp-content/uploads/2018/06/welcome-gif-image-7.gif', class: 'h-10 w-30' %>
+</div>
+<%= image_tag "https://www.pngarts.com/files/12/Budget-Logo-PNG-Download-Image.png", class: 'md:max-w-md self-center h-[200px] w-[200px]' %>
+
+<div class="actions absolute w-10/12 bottom-4 self-center">
+  <%= link_to new_user_session_path, class: 'group rounded-lg mb-4 flex items-center border hover:border-main bg-main p-3 justify-center hover:bg-transparent' do %>
+    <span class="text-white uppercase group-hover:text-main font-semibold">Log In</span>
+  <% end %>
+  <%= link_to new_user_registration_path, class: 'group rounded-lg flex items-center bg-main border hover:border-main p-3 hover:bg-transparent justify-center' do %>
+    <span class="group-hover:text-main text-white uppercase font-semibold">Sign Up</span>
+  <% end %>
+</div>
