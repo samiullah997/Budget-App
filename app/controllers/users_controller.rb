@@ -4,9 +4,10 @@ class UsersController < ApplicationController
 
   def splash
     if current_user
-      redirect_to groups_url, alert: "You have already sign in as, #{current_user.name}"
+      flash[:notice] = "You have already sign in as, #{current_user.name}"
+      redirect_to groups_url
     else
-      render :splash
+      render :splash_page
     end
   end
 

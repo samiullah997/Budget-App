@@ -1,30 +1,8 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+
+  <img src="https://user-images.githubusercontent.com/84629565/202665566-ba1a8ed3-041f-45bc-b21b-efdcc357189b.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -39,6 +17,8 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🖺 Entity Relationship Diagram](#er-diagram)
+  - [📽️ Project Documentation](#pro-doc)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -58,31 +38,28 @@ After you're finished please remove all the comments and instructions!
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Budget-App <a name="about-project"></a>
+![blog-gif](https://www.johnhancock.com/content/dam/onejohnhancock/articles/3-budgeting-rules-to-help-you-save-money/BudgetingRules_80_20.gif)
 
->
+**Budget-App** is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.The Ruby on Rails application that allows the user to:
 
-**Budget-App** is a simple budget app that allows users to add their incomes and expenses and see their balance in real time.
+ - register and log in, so that the data is private to them.
+ - introduce new transactions associated with a category.
+ - see the money spent on each category.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Ruby On Rails <a name="ruby-on-rails"></a>
-### Tailwind <a name="tailwind"></a>
-### HTML <a name="html"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
+### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">Ruby on Rails</a></li>
-  </ul>
+  <summary>Ruby</summary>
 </details>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">localhost</a></li>
-  </ul>
+  <summary>Ruby on Rails</summary>
+</details>
+
+<details>
+  <summary>Tailwind CSS / Material Tailwind </summary>
 </details>
 
 <details>
@@ -96,105 +73,81 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe the main features of your project.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Authentication, User can manage his categories and transactions ]**
+- **[User must be authenticated]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Project Documentation -->
+## 📽️ Project Doocumentation <a name="pro-doc"></a>
+
+Here is a link to the [Video Link](https://www.loom.com/share/7a069d3c9ba841f98177f4365011a177) of the project.
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Budget-App Coming soon...](https://budget-app.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ER DIAGRAM-->
+## :card_index: Entity Relationship Diagram <a name="er-diagram"></a>
+![er-diagram](https://github.com/microverseinc/curriculum-rails/raw/main/capstone/images/erd_diagram.png)
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
-
-
-Example command:
-
-```sh
+`Git` and `Ruby`
+```
  gem install rails
 ```
-
-
-### Setup
-
-Clone this repository to your desired folder:
-
-
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
--
 
 ### Install
 
 Install this project with:
 
-
-Example command:
-
 ```sh
-  cd my-project
-  gem install
+  bundle install
 ```
--
+```sh
+  npm install
+```
 
+Create Database (Mandatory)
+
+```
+rails db:create
+```
+
+If you have made a migration then run this command
+
+```
+rails db:migrate
+```
+```
+rails db:seed
+```
 ### Usage
 
 To run the project, execute the following command:
 
-
-Example command:
-
 ```sh
-  rails server
-```
--
-
-### Run tests
-
-To run tests, run the following command:
-
-
-Example command:
-
+  ./bin/dev  # for building tailwind css
+``` 
+Or
 ```sh
-  bin/rails test test/models/article_test.rb
+  rails server or rails s  # after build
+``` 
+
+Run tests
 ```
--
-
-### Deployment
-
-You can deploy this project using:
-
-
-Example:
-
-```sh
-
+rspec
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,9 +155,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
-👤 **Samiullah**
+👤**Author Samiullah**
 
 - GitHub: [@samiullah997](https://github.com/samiullah997)
 - Twitter: [@samiullahk997](https://twitter.com/samiullahk997)
@@ -216,12 +167,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
+- [ ] **[Use importmaps or esbuild for loading JavaScript]**
+- [ ] **[Notifications that pop up and close]**
+- [ ] **[Implement side menu and User settings]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -238,9 +186,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -248,17 +194,23 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+I would like to thank:
+- [Microverse](https://microverse.org)
+- Code reviewers
+- Inspiration
+   - [Vitor Guedes Madeira](https://github.com/VitorGuedesMadeira) 
 
-I would like to thank...
+Under the the [Creative Commons liscense](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/84629565/181086933-d5bcdb09-da51-40f6-b0f8-a1f191614257.png">
+
+Original design from [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[Question_1]**
 
@@ -274,8 +226,6 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
