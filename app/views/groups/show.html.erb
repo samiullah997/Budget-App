@@ -1,7 +1,7 @@
 <div class="mx-auto md:w-2/3 w-full flex">
   <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 inline-block font-medium rounded-lg text-green-500" id="notice"><%= notice %></p>
+    <% if flash[:notice] %>
+      <p class="py-2 px-3 bg-green-50 mb-5 inline-block font-medium rounded-lg text-green-500" id="notice"><%= flash[:notice] %></p>
     <% end %>
     <%= render @group %>
     <%= link_to 'Edit group', edit_group_path(@group), class: "mt-2 rounded-lg bg-gray-100 inline-block py-3 px-5 font-medium" %>

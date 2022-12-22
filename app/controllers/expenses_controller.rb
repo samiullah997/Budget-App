@@ -1,10 +1,10 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: %i[edit update destroy]
-  before_action :set_user, only: %i[index edit create update destroy]
-  before_action :set_group, only: %i[index new edit create update destroy]
+  before_action :set_expenses, only: %i[edit update destroy]
+  before_action :set_users, only: %i[index edit create update destroy]
+  before_action :set_groups, only: %i[index new edit create update destroy]
 
   def index
-    @expenses = @group.expenses.order(created_at: :desc)
+    @expenses = @group.expenses.order(created_at: 'desc')
   end
 
   def new
@@ -12,10 +12,11 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    @expense = Expense.new(author: @author, **expense_params)
+    @expense = Expense.new(author: @author, **expenses_params)
     if @expense.save
       @group_expense = GroupExpense.create(group: @group, expense: @expense)
-      redirect_to group_expenses_url(@group), notice: 'Expense has been successfully created.'
+      flash[:notice] = 'Expense has been successfully created.'
+      redirect_to group_expenses_url(@group)
     else
       render :new, status: :unprocessable_entity
     end
@@ -24,13 +25,16 @@ class ExpensesController < ApplicationController
   def edit; end
 
   def destroy
-    @expense.destroy
-    redirect_to group_expenses_url(@group), notice: 'Expense has been successfully destroyed.'
+    return unless @expense.destroy
+
+    flash[:notice] = 'Expense has been successfully destroyed.'
+    redirect_to group_expenses_url(@group)
   end
 
   def update
-    if @expense.update(expense_params)
-      redirect_to group_expenses_url, notice: 'Expense has been successfully updated.'
+    if @expense.update(expenses_params)
+      flash[:notice] = 'Expense has been successfully updated.'
+      redirect_to group_expenses_url
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,19 +42,19 @@ class ExpensesController < ApplicationController
 
   private
 
-  def set_group
-    @group = set_user.groups.find(params[:group_id])
+  def set_groups
+    @group = set_users.groups.find(params[:group_id])
   end
 
-  def set_expense
-    @expense = set_user.expenses.find(params[:id])
+  def set_expenses
+    @expense = set_users.expenses.find(params[:id])
   end
 
-  def set_user
+  def set_users
     @author = current_user
   end
 
-  def expense_params
+  def expenses_params
     params.require(:expense).permit(:name, :amount)
   end
 end
