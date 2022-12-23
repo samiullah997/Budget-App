@@ -1,0 +1,13 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if flash[:notice] %>
+      <p class="py-2 px-3 bg-green-50 mb-5 inline-block font-medium rounded-lg text-green-500" id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <%= render @group %>
+    <%= link_to 'Edit group', edit_group_path(@group), class: "mt-2 rounded-lg bg-gray-100 inline-block py-3 px-5 font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to 'Destroy this group', group_path(@group), method: :delete, class: "mt-2 bg-gray-100 font-medium rounded-lg py-3 px-5" %>
+    </div>
+    <%= link_to 'Back to groups', groups_path, class: "ml-2 rounded-lg inline-block font-medium py-3 px-5 bg-gray-100 " %>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<%= form_with(model: group, class: "contents") do |form| %>
+  <% if group.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 font-medium rounded-lg text-red-500 py-2 px-3 mt-3">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited group from being saved:</h2>
+
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "block shadow outline-none rounded-md border-gray-200 border px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :icon %>
+    <%= form.text_field :icon, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="inline">
+  </div>
+
+  <div class="mt-10 bg-second fixed bottom-0 left-0 right-0 py-3 flex justify-center items-center">
+    <%= form.submit "#{action_name == 'edit' ? 'Update' : 'Save'}", class: "w-[20%] py-2 px-5 bg-second  text-white block uppercase font-medium" %>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-white">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9" />
+    </svg>
+
+  </div>
+<% end %>
