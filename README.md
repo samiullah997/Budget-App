@@ -86,7 +86,7 @@ Here is a link to the [Video Link](https://www.loom.com/share/7a069d3c9ba841f981
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Budget-App Coming soon...](https://budget-app.herokuapp.com/)
+- [Budget-App Coming soon...](https://budget-app-sami.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
